@@ -23,7 +23,7 @@ if (userData) {
 }
 
 // Handle screen switching
-manageButton.addEventListener('click', () => (switchScreen(mainScreen, manageButton)))
+manageButton.addEventListener('click', () => (switchScreen(mainScreen, manageScreen)))
 linksButton.addEventListener('click', () => (switchScreen(mainScreen, linksScreen)))
 
 
