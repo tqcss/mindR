@@ -1,0 +1,122 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #fff;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    display: block;
+}
+
+#manage {
+    display: none
+}
+
+#links {
+    display: none;
+}
+
+.header {
+    border-bottom: solid 5px #176B87;
+    box-shadow: 0 0 10px #ccc;
+    background-color: #23282D;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 15px;
+    color: #fff;
+    width: 100%;
+}
+
+.header > span {
+    color: #318dac;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color: #444;
+}
+
+.content > #placeholder {
+    display: none;
+    aspect-ratio: 1/1;
+    font-size: .8rem;
+    text-align: center;
+    align-content: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-weight: 700;
+    color: #888;
+}
+
+.content > .label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 10px 10px 10px;
+    text-align: left;
+}
+
+.content > li {
+    width: 100%;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: bold;
+    justify-content: space-between;
+    /* background-color: #fff;
+    box-shadow: 0 0 10px #ccc; */
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.content > li:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.content > li:hover {
+    background-color: #eee;
+    transition: background-color 0s;
+}
+
+.content > li > .timestamp {
+    padding: 20px;  
+}
+
+.content > li > .reminder {
+    text-align: right;
+    padding: 20px;
+}
+
+#main > .options {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px 10px 10px;
+    gap: 5px;
+    background-color: #23282D;
+    border-top: solid 5px #176B87;
+}
+
+#main> .options > button {
+    display: block;
+    background-color: #176B87;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.5s;
+}
+
+#main> .options > button:hover {
+    background-color: #318dac;
+    transition: background-color 0s;
+}
