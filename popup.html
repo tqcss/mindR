@@ -10,7 +10,7 @@
     <div class="screen" id="main">
         <ul class="content">
             <div class="label">Upcoming Reminders:</div>
-            <div id="placeholder">Looks like you have no reminders set.</div>
+            <div class="placeholder">Looks like you have no reminders set.</div>
         </ul>
         <div class="options">
             <button id="manageButton">MANAGE</button>
@@ -18,11 +18,23 @@
         </div>
     </div>
     <div class="screen" id="manage">
-        manage screen
+        <div id="reminder-container">
+            <div class="placeholder">Looks like you have no reminders set.</div>
+        </div>
+        <div class="options">
+            <button id="addButton">ADD</button>
+            <button id="manageBackButton">BACK</button>
+        </div>
     </div>
     <div class="screen" id="links">
-        links screen
+        <div id="reminder-container">
+            <div class="placeholder">Looks like you have no links saved.</div>
+        </div>
+        <div class="options">
+            <button id="addButton">ADD</button>
+            <button id="linksBackButton">BACK</button>
+        </div>
     </div>
 </body>
-<script src="popup.js"></script>
+<script src="popup.js" type="module"></script>
 </html>

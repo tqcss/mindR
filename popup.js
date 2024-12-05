@@ -1,3 +1,6 @@
+import { Reminder } from './scripts/classes.js'
+import { PriorityQueue } from './scripts/interest.js'
+
 // Constants
 const storageKey = ['mindrData']
 
@@ -9,23 +12,36 @@ const linksScreen = document.getElementById('links')
 // Popup Elements
 const manageButton = document.getElementById('manageButton')
 const linksButton = document.getElementById('linksButton')
-const placeholder = document.getElementById('placeholder')
+const placeholders = document.getElementsByClassName('placeholder')
 const reminderContainer = document.querySelector('.content')
+const manageBackButton = document.getElementById('manageBackButton')
+const linksBackButton = document.getElementById('linksBackButton')
 
-let userData = chrome.storage.local.get(storageKey, retrieveUserData)
+// Dynamic Variables
+let userData;
+
+main()
 
 
-// Handle dynamic data rendering
-if (userData) {
-    // pass
-} else {
-    placeholder.style.display = 'block'
+// Main function
+function main() {
+    // Handle dynamic data rendering
+    chrome.storage.local.get(storageKey, retrieveUserData)
+
+    if (userData) {
+        // pass
+    } else {
+        for (let placeholder of placeholders) {
+            placeholder.style.display = 'block'
+        }
+    }
+
+    // Handle screen switching
+    manageButton.addEventListener('click', () => (switchScreen(mainScreen, manageScreen)))
+    linksButton.addEventListener('click', () => (switchScreen(mainScreen, linksScreen)))
+    manageBackButton.addEventListener('click', () => (switchScreen(manageScreen, mainScreen)))
+    linksBackButton.addEventListener('click', () => (switchScreen(linksScreen, mainScreen)))
 }
-
-// Handle screen switching
-manageButton.addEventListener('click', () => (switchScreen(mainScreen, manageScreen)))
-linksButton.addEventListener('click', () => (switchScreen(mainScreen, linksScreen)))
-
 
 // Helper functions
 function switchScreen(from, to) {
@@ -33,11 +49,11 @@ function switchScreen(from, to) {
     to.style.display = 'block'
 }
 
-function renderUserData() {
+function addUserData() {
     // pass
 }
 
-function addUserData(timestamp, label) {
+function renderUserData(timestamp, label) {
     let reminderCard = document.createElement('li')
     let reminderTimestamp = document.createElement('div')
     let reminderLabel = document.createElement('div')
@@ -54,13 +70,11 @@ function addUserData(timestamp, label) {
 }
 
 function retrieveUserData(data) {
-    return data
+    userData = data;
 }
 
 function saveUserData() {
-    chrome.storage.local.set(storageKey, userData)
-}
-
-function addUserData() {
-
+    chrome.storage.local.set({storageKey : userData}, () => {
+        // pass
+    })
 }
