@@ -3,7 +3,7 @@
     "name": "mindR",
     "description": "Reminder Web Extension",
     "version": "1.0",
-    "permissions": ["storage"],
+    "permissions": ["alarms", "notifications", "storage"],
     "background": {
         "service_worker": "background.js",
         "type": "module"
