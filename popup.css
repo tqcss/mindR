@@ -1,122 +1,137 @@
 body {
-    font-family: Helvetica, sans-serif;
-    background-color: #fff;
-    width: 250px;
     margin: 0;
     padding: 0;
-    color: #444;
-}
-
-#main {
-    display: block;
-}
-
-#manage {
-    display: none
-}
-
-#links {
-    display: none;
+    width: 300px;
+    color: #F0F6FC;
+    background-color: #0E1218;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 .header {
-    border-bottom: solid 5px #176B87;
-    box-shadow: 0 0 10px #ccc;
-    background-color: #23282D;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding-top: 15px;
-    color: #fff;
-    width: 100%;
-}
-
-.header > span {
-    color: #318dac;
-}
-
-.content {
+    background-color: #1A2028;
+    border-bottom: 1px solid #323941;
     display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-
-.placeholder {
-    display: none;
-    aspect-ratio: 1/1;
-    font-size: .8rem;
-    text-align: center;
-    align-content: center;
-    text-transform: uppercase;
-    padding: 20px;
-    font-weight: 700;
-    color: #888;
-}
-
-.label {
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 15px 10px 10px 10px;
-    text-align: left;
-}
-
-.content > li {
-    width: 100%;
-    display: flex;
-    font-size: 0.8rem;
-    font-weight: bold;
     justify-content: space-between;
-    /* background-color: #fff;
-    box-shadow: 0 0 10px #ccc; */
-    border-top: 1px solid #ccc;
-    cursor: pointer;
-    transition: background-color 0.4s;
+    align-items: center;
+    padding: 8px 8px 8px 15px;
 }
 
-.content > li:last-child {
-    border-bottom: 1px solid #ccc;
+.accent-color {
+    color: #b93a36;
 }
 
-.content > li:hover {
-    background-color: #eee;
-    transition: background-color 0s;
+.logo {
+    filter: invert();
+    aspect-ratio: 1/1;
+    width: 20px;
+    height: 20px;
 }
 
-.content > li > .timestamp {
-    padding: 20px;  
+.exit-button {
+    border: none;
+    border-radius: 4px;
+    color: #9198A1;
+    font-size: 1.3rem;
+    width: 30px;
+    height: 30px;
+    padding-bottom: 5px;
+    font-family: monospace;
+    background-color: transparent;
+    transition: background-color 0.2s;
 }
 
-.content > li > .reminder {
-    text-align: right;
-    padding: 20px;
+.exit-button:hover {
+    background-color: #262C36;
 }
 
-.options {
+.reminder-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.reminder-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #323941;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.reminder-icon > img {
+    filter: invert() brightness(85%);
+    width: 0.8rem;
+    height: 0.8rem;
+    position: relative;
+}
+
+.reminder-container {
     display: flex;
     flex-direction: column;
-    padding: 15px 10px 10px 10px;
+    align-items: center;
     gap: 5px;
-    background-color: #23282D;
-    border-top: solid 5px #176B87;
 }
 
-.options > button {
-    display: block;
-    background-color: #176B87;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: bold;
+.reminder-card {
+    width: calc(100% - 22px);
+    height: 60px;
+    background-color: #151B23;
+    border: 1px solid #3D444D;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+}
+
+.reminder-card > button {
+    max-width: 20px;
+    height: 100%;
     border: none;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background-color 0.5s;
+    color: #0E1218;
+    background-color: #3D444D;
+    font-family: monospace;
+    font-weight: 900;
+    transition: background-color 0.2s;
 }
 
-.options > button:hover {
-    background-color: #318dac;
-    transition: background-color 0s;
+.reminder-card > button:hover {
+    background-color: #9198A1;
+}
+
+.reminder-card > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 10px;
+}
+
+.reminder-time {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #3793F8;
+}
+
+.button-container {
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+}
+
+.button-container > button {
+    flex-grow: 1;
+    border: none;
+    background-color: #238636;
+    border-radius: 5px;
+    color: #F0F6FC;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    transition: background-color 0.2s;
+}
+
+.button-container > button:hover {
+    background-color: #49ad5d;
 }

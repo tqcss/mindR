@@ -6,33 +6,55 @@
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <div class="header">mind<span>R</span></div>
-    <div class="screen" id="main">
-        <ul class="content">
-            <div class="label">Upcoming Reminders:</div>
-            <div class="placeholder">Looks like you have no reminders set.</div>
-        </ul>
-        <div class="options">
-            <button id="manageButton">MANAGE</button>
-            <button id="linksButton">LINKS</button>
-        </div>
+    <div class="header">
+        <img class="logo" src="./assets/icon.png" draggable="false">
+        <button class="exit-button">x</button>
     </div>
-    <div class="screen" id="manage">
-        <div id="reminder-container">
-            <div class="placeholder">Looks like you have no reminders set.</div>
+    <div class="panel">
+        <div class="reminder-label">
+            <div class="reminder-icon">
+                <img src="./assets/bell.png">
+            </div>
+            Upcoming Reminders:
         </div>
-        <div class="options">
-            <button id="addButton">ADD</button>
-            <button id="manageBackButton">BACK</button>
+        <div class="reminder-container">
+            <div class="reminder-card">
+                <div>
+                    <div class="reminder-time">
+                        00:00
+                    </div>
+                    <div class="reminder-name">
+                        Lorem ipsum dolor sit amet consectetur,
+                    </div>
+                </div>
+                <button>></button>
+            </div>
+            <div class="reminder-card">
+                <div>
+                    <div class="reminder-time">
+                        00:00
+                    </div>
+                    <div class="reminder-name">
+                        Lorem ipsum dolor sit amet consectetur,
+                    </div>
+                </div>
+                <button>></button>
+            </div>
+            <div class="reminder-card">
+                <div>
+                    <div class="reminder-time">
+                        00:00
+                    </div>
+                    <div class="reminder-name">
+                        Lorem ipsum dolor sit amet consectetur,
+                    </div>
+                </div>
+                <button>></button>
+            </div>
         </div>
-    </div>
-    <div class="screen" id="links">
-        <div id="reminder-container">
-            <div class="placeholder">Looks like you have no links saved.</div>
-        </div>
-        <div class="options">
-            <button id="addButton">ADD</button>
-            <button id="linksBackButton">BACK</button>
+        <div class="button-container">
+            <button>Manage Reminders</button>
+            <button>Bookmarked Links</button>
         </div>
     </div>
 </body>
